@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First HTML Page</title>
+    <script> // executa essa função quando o documento é carregado
+        window.onload = function() {
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+
+        var lista = document.createElement("ol");
+        document.body.appendChild(lista);
+
+        var button = document.createElement("button");
+        textbutton = document.createTextNode("Clica aqui");
+        button.appendChild(textbutton);
+        document.body.appendChild(button);
+
+        button.addEventListener("click", function(event) {
+            var itemText = document.createElement("li");
+            var itemTextContent = document.createTextNode("Item de lista");
+            itemText.appendChild(itemTextContent);
+            lista.appendChild(itemText);
+        });
+        }
+        </script>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>This is my first HTML page.</p>
+</body>
+</html>
